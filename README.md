@@ -1,4 +1,7 @@
 # Loritz Search Page
+
+![Deployment badge](https://github.com/fablab-loritz/loritz-search-page/actions/workflows/pages/pages-build-deployment/badge.svg)
+
 Page de recherche par défaut des navigateurs au [lycée Henri Loritz](https://www.loritz.fr).
 
 ![Screenshot de la page search.loritz.fr](screenshot.png)
