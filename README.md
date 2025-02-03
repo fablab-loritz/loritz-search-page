@@ -4,3 +4,7 @@ Page de recherche par défaut des navigateurs au [lycée Henri Loritz](https://w
 ![Screenshot de la page search.loritz.fr](screenshot.png)
 
 Disponible à l'adresse https://search.loritz.fr , cette page est une simple page HTML avec un formulaire qui redirige les recherches vers https://www.google.com/search .
+
+## Evolution prévue
+
+Il est prévu de permettre de diffuser des informations via cette page.
