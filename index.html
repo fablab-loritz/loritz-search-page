@@ -3,85 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'Accueil</title>
+    <title>Page de Recherche</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Alignement en haut */
+            align-items: center;
+            /*padding-top: 15vh;*/
         }
-        header {
-            background-color: #f4f4f4;
-            padding: 20px;
+
+        .v-center {
+            padding-top: 20vh; /* Décale le contenu un peu plus haut */
         }
-        footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 15px;
-            background-color: #f2f2f2;
-            color: rgb(108, 108, 108);
-            text-align: center;
-            font-size: 14px;
-        }
+
         .logo {
-            /*max-width: 200px;*/
-            margin: 0 auto;
-            /*height: 150px;*/
-            display: block;
-            max-width: 100%;
-            max-height: 150px;
+            max-width: 800px;
             height: auto;
+            margin-bottom: 20px;
         }
+
         .search-container {
-            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
+
         input[type="text"] {
-            padding: 10px;
-            width: 50%;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 12px 25px;
+            width: 100%;
+            font-size: 18px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            text-align: left;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
         }
+
+        input[type="text"]:focus {
+            border-color: #4285f4;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
         button {
-            padding: 10px 20px;
-            margin-left: 10px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            border: 1px solid #dfe1e5;
             border-radius: 4px;
             cursor: pointer;
+            margin: 5px;
         }
+
         button:hover {
-            background-color: #357ae8;
+            background-color: #f1f3f4;
         }
-        a {
-            display: inline-block;
+
+        footer {
+            position: absolute;
+            bottom: 0px;
+            padding: 15px 0px;
+            width: 100%;
+            font-size: 14px;
+            background-color: #f2f2f2;
+            color: rgb(108, 108, 108);
+            display: flex;
+            justify-content: center; /* Centre le contenu horizontalement */
+            gap: 30px; /* Ajoute un espacement entre les deux div */
         }
+
     </style>
 </head>
 <body>
-
-    <header>
-        <!-- Emplacement pour le logo -->
-         <a href="https://jpo.loritz.fr/">
+    <div class="v-center">
+        <!-- Bannière -->
+        <a href="https://jpo.loritz.fr/">
             <img src="logo-porte-ouverte.png" alt="Logo de l'entreprise" class="logo">
         </a>
-    </header>
 
-    <!-- Barre de recherche Google -->
-    <div class="search-container">
-        <form action="https://www.google.com/search" method="get">
-            <input type="text" name="q" placeholder="Rechercher sur Google...">
-            <button type="submit">Rechercher</button>
-        </form>
+        <!-- Barre de recherche -->
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get">
+                <input type="text" name="q" placeholder="Rechercher sur Google..." autofocus>
+                <div class="buttons">
+                    <button type="submit">Recherche Google</button>
+                    <button type="button" onclick="window.location.href='https://www.google.com/doodles'">J'ai de la chance</button>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        Page créée par l'Incubateur Loritz'Labs. - Retrouvez le code sur <a href="https://github.com/fablab-loritz/loritz-search-page">GitHub</a>.
+        <div>Page créée par l'Incubateur Loritz'Labs.</div>
+        <div>Retrouvez le code sur <a href="https://github.com/fablab-loritz/loritz-search-page">GitHub</a>.</div>
     </footer>
 
 </body>
