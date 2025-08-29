@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion Pronote</title>
+  <style>
+    body {
+      background-color: #008673; /* couleur de fond */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 10px 0;
+      width: 280px;
+    }
+
+    .card h2 {
+      text-align: center;
+      font-size: 16px;
+      margin: 10px 0 15px 0;
+      color: #333;
+    }
+
+    .card h1 {
+      text-align: center;
+      font-size: 24px;
+      margin: 10px 0 15px 0;
+      color: #333;
+    }
+
+    .card a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 12px 18px;
+      transition: background 0.2s;
+    }
+
+    .card a:hover {
+      background: #f5f5f5;
+    }
+
+    .card a img {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #ddd;
+      margin: 0 15px;
+    }
+
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        padding: 15px 0px;
+        width: 100%;
+        font-size: 14px;
+        background-color: #f2f2f2;
+        color: #3c4043;
+        display: flex;
+        justify-content: center; /* Centre le contenu horizontalement */
+        gap: 30px; /* Ajoute un espacement entre les deux div */
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #3c4043;
+    }
+
+    footer a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Carte -->
+    <div class="card">
+        <h1>Méthode de connexion à Pronote WEB</h1>
+
+        <a href="https://0540042c.index-education.net/pronote/">
+            <img src="logo/mbn-512.jpg" style="height: 48px; width: 48px;" alt="MBN">
+        Identifiants MBN
+        </a>
+
+        <div class="divider"></div>
+
+        <a href="https://0540042c.index-education.net/pronote/?login=true">
+            <img src="logo/PRONOTE-papillon.svg" style="height: 48px; width: 48px;" alt="Pronote">
+        Identifiants Pronote
+        </a>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div>Page créée par l'<a href="https://fablab.loritz.fr/">Incubateur Loritz'Labs</a></div>
+        <div><a href="https://github.com/fablab-loritz/loritz-search-page">Code source</a></div>
+        <div><a href="https://github.com/fablab-loritz/loritz-search-page/issues">Un problème ? Une question ? Une suggestion ?</a></div>
+        <div><a href="https://status.it.loritz.fr">Statut des infrastructures</a></div>
+    </footer>
+
+</body>
+</html>
