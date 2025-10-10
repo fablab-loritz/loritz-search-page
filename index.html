@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 20px 0 0 0;
             padding: 0;
             text-align: center;
             height: 100vh;
@@ -105,9 +105,49 @@
             text-decoration: underline;
         }
 
+        .top {
+            width: 100%;
+        }
+
+        .gauche {
+            margin-left: 30px;
+            float: left;
+            display: flex;
+            gap: 30px;
+        }
+
+        .droite {
+            margin-right: 30px;
+            float: right;
+            display: flex;
+            gap: 30px;
+        }
+
+        .top a {
+            text-decoration: none;
+            color: #3c4043;
+        }
+
+        .top a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
+    <!-- Mail -->
+    <div class="top">
+        <div class="gauche">
+            <div><a href="https://github.com/fablab-loritz/loritz-search-page/blob/main/README.md">À propos</a></div>
+        </div>
+        <div class="droite">
+            <div><a href="https://webmail.ac-nancy-metz.fr/">Webmail</a></div>
+            <div><a href="https://partage.ac-nancy-metz.fr/">Partage</a></div>
+        </div>
+    </div>
+
+
     <div class="v-center">
         <!-- Bannière -->
         <a href="https://www.loritz.fr/" class="banner-link">
