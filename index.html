@@ -145,6 +145,70 @@
             text-decoration: underline;
         }
 
+
+        select {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #3c4043;
+            background-color: #f8f9fa;
+            border: 1px solid #dfe1e5;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        select:hover {
+            background-color: #f1f3f4;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            border: 1px solid #dfe1e5;
+            border-radius: 25px;
+            overflow: hidden;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 10px 0px rgba(31, 31, 31, 0.08);
+            background: white;
+        }
+
+        .search-bar:hover {
+            box-shadow: 0px 3px 10px 0px rgba(31, 31, 31, 0.20);
+        }
+
+        .search-bar input[type="text"] {
+            flex: 1;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 14px 25px;
+        }
+
+        .search-bar input[type="text"]:focus {
+            outline: none;
+        }
+
+        .search-bar select {
+            border: none;
+            /*border-left: 1px solid #dfe1e5;*/
+            background: transparent;
+            padding: 14px 15px;
+            font-size: 16px;
+            color: #3c4043;
+            cursor: pointer;
+            outline: none;
+            margin: 0;
+            margin-right: 12px;
+        }
+
+        .vertical-separator {
+            background-color: #757575;
+            width: 2px;
+            height: 40px;
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -176,12 +240,29 @@
 
         <!-- Barre de recherche -->
         <div class="search-container">
-            <form action="https://www.google.com/search" method="get">
-                <input type="text" name="q" placeholder="Rechercher sur Google..." autofocus>
+            <form id="searchForm" onsubmit="return searchEngine();">
+
+                <div class="search-bar">
+                    <input type="text" name="q" id="searchInput" placeholder="Rechercher..." autofocus>
+
+                    <div class="vertical-separator"></div>
+
+                    <select id="engine">
+                        <option value="qwant" selected>Qwant</option>
+                        <option value="google">Google</option>
+                    </select>
+                </div>
+
                 <div class="buttons">
-                    <button type="submit">Recherche Google</button>
-                    <button type="button" onclick="window.location.href='https://mbn.loritz.fr'">Mon Bureau Numérique</button>
-                    <button type="button" onclick="window.location.href='pronote_web.html'">Pronote WEB</button>
+                    <button type="submit">Rechercher</button>
+
+                    <button type="button" onclick="window.location.href='https://mbn.loritz.fr'">
+                        Mon Bureau Numérique
+                    </button>
+
+                    <button type="button" onclick="window.location.href='pronote_web.html'">
+                        Pronote WEB
+                    </button>
                 </div>
             </form>
         </div>
@@ -195,5 +276,25 @@
         <div><a href="https://status.it.loritz.fr">Statut des infrastructures</a></div>
     </footer>
 
+
+
+
+    <script>
+    function searchEngine() {
+        const query = document.getElementById("searchInput").value;
+        const engine = document.getElementById("engine").value;
+
+        let url;
+
+        if (engine === "google") {
+            url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        } else {
+            url = "https://www.qwant.com/?q=" + encodeURIComponent(query);
+        }
+
+        window.location.href = url;
+        return false;
+    }
+    </script>
 </body>
 </html>
