@@ -46,6 +46,7 @@
 
                     <select id="engine">
                         <option value="qwant" selected>Qwant</option>
+                        <option value="google-no-ai">Google (sans IA)</option>
                         <option value="google">Google</option>
                     </select>
                 </div>
@@ -85,6 +86,8 @@
 
         if (engine === "google") {
             url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        } else if (engine === "google-no-ai") {
+            url = "https://www.google.com/search?udm=14&q=" + encodeURIComponent(query);
         } else {
             url = "https://www.qwant.com/?q=" + encodeURIComponent(query);
         }
